@@ -28,7 +28,7 @@
     // Create a storage reference from our storage service
     export async function uploadFile(file) {
       console.log(file);
-      const storageRef = ref(storage, `gs://video-creation1.firebasestorage.app/uploads/${file.name}`);
+      const storageRef = ref(storage, `uploads/${file.name}`);
       try {
         // 'file' comes from the Blob or File API
         await uploadBytes(storageRef, file)
