@@ -1,9 +1,108 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html - copy version>
+<html lang="en">
+
 <head>
-    <title>Hello World</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create Your Videos</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Hello world</h1>
+  <div class="container">
+    <div class="form-section">
+      <h1 class="main-title">CREATE YOUR OWN VIDEOS!</h1>
+      <h2 class="subtitle">IN AN INSTANT</h2>
+
+      <p class="description">
+        Have an event to celebrate? Just send us a photo of it. We'll make a video right away and double your joy!
+      </p>
+
+      <form id="site-generator-form">
+        <div class="form-group">
+          <label for="photo-upload">Uploading photo</label>
+          <input
+            type="text"
+            id="photo-upload"
+            placeholder="upload your photo here."
+            required
+          >
+        </div>
+        <div class="form-group">
+          <label for="email-contact">Provide your contact information</label>
+          <input
+            type="email"
+            id="email-contact"
+            placeholder="your email ID here."
+            required
+          >
+        </div>
+        <div class="form-group">
+          <label for="comments">Send us your photos, and we'll add them as part of the example video. We'll send it as an MP4 file to the email id you
+          provided within 30 minutes.</label>
+          <textarea
+            id="comments"
+            placeholder="Please confirm your email id correctly and any other comments"
+            required
+          ></textarea>
+        </div>
+
+        <div class="form-group advanced-settings-toggle">
+          <button type="button" id="toggle-advanced">
+            <span class="arrow">▾</span> SHOW VIDEO ADVANCED SETTINGS
+          </button>
+        </div>
+
+        <div class="advanced-settings" id="advanced-settings">
+          <!-- Advanced settings will be hidden by default -->
+          <div class="form-group">
+            <label for="primary-color">Brand Color</label>
+            <input type="color" id="primary-color" value="#6A4AE8">
+          </div>
+
+          <div class="form-group">
+            <label for="template">Template Style</label>
+            <select id="template">
+              <option value="modern">Modern</option>
+              <option value="classic">Classic</option>
+              <option value="minimal">Minimal</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-button">CONFIRM & SUBMIT</button>
+      </form>
+      
+      <div id="thank-you-message" class="thank-you-hidden">
+        Thank you!
+      </div>
+    </div>
+
+    <div class="preview-section">
+      <div class="video-preview">
+        <!-- Video Preview Container with 9:16 ratio -->
+        <div class="video-container">
+          <!-- Video placeholder or actual video player -->
+          <div class="video-placeholder">
+            <div class="video-placeholder-text">Video Preview</div>
+          </div>
+          
+          <!-- Video controls -->
+          <div class="video-controls">
+            <div class="control-button play-button"></div>
+            <div class="progress-bar">
+              <div class="progress-indicator"></div>
+            </div>
+            <div class="control-button volume-button"></div>
+            <div class="control-button fullscreen-button"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
