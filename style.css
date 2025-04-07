@@ -83,7 +83,7 @@ select {
   height: 45px;
 }
 
-#submit-button {
+.submit-button {
   background-color: #6A4AE8;
   color: white;
   border: none;
@@ -95,7 +95,7 @@ select {
   transition: background-color 0.3s;
 }
 
-#submit-button:hover {
+.submit-button:hover {
   background-color: #5A3AD8;
 }
 
