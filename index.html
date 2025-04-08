@@ -17,17 +17,18 @@
 
       <p class="description">
         Have an event to celebrate? Just send us a photo of it. We'll make a video right away and double your joy!
-      </p>
+        </p>
+        <p class="description">
+         Send us your photos, and we'll add them as part of the example video. We'll send it as an MP4 file to the email id you
+          provided within 30 minutes.</p>
 
       <form id="site-generator-form">
         <div class="form-group">
-          <label for="photo-upload">Uploading photo</label>
-          <input
-            type="text"
-            id="photo-upload"
-            placeholder="upload your photo here."
+          <label for="fileInput">Uploading photo</label>
+          <input type="file" id="fileInput"
             required
           >
+
         </div>
         <div class="form-group">
           <label for="email-contact">Provide your contact information</label>
@@ -38,19 +39,22 @@
             required
           >
         </div>
-        <div class="form-group">
+
+          <div class="form-group">
           <label for="comments">Send us your photos, and we'll add them as part of the example video. We'll send it as an MP4 file to the email id you
           provided within 30 minutes.</label>
-          <textarea
+
+<!--          <textarea
             id="comments"
             placeholder="Please confirm your email id correctly and any other comments"
-            required
-          ></textarea>
+            ></textarea>
+-->
+
         </div>
 
         <div class="form-group advanced-settings-toggle">
           <button type="button" id="toggle-advanced">
-            <span class="arrow">▾</span> SHOW VIDEO ADVANCED SETTINGS
+            <span class="arrow">▾</span> checkout
           </button>
         </div>
 
@@ -71,14 +75,9 @@
           </div>
         </div>
 
-        <button type="submit" class="submit-button">CONFIRM & SUBMIT</button>
-        <!-- <script type="module" src="master/main.js"></script>  
-        
-        <button class="submit-button">CONFIRM & SUBMIT</button>
-        <script type="module" src="master/main.js"></script> -->
-        
+        <button type="submit" class="submit-button" id="uploadButton">CONFIRM & SUBMIT</button>
       </form>
-      
+
       <div id="thank-you-message" class="thank-you-hidden">
         Thank you!
       </div>
@@ -92,7 +91,7 @@
           <div class="video-placeholder">
             <div class="video-placeholder-text">Video Preview</div>
           </div>
-          
+
           <!-- Video controls -->
           <div class="video-controls">
             <div class="control-button play-button"></div>
@@ -107,7 +106,7 @@
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="main.js"></script>
 </body>
 
 </html>
