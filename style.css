@@ -1,4 +1,4 @@
-/* Reset and base styles - copy versionh */
+/* Reset and base styles */
 * {
   margin: 0;
   padding: 0;
@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: #f9f9f9;
+  background-color: #f2f2ff;
   color: #333;
   line-height: 1.6;
 }
@@ -17,44 +17,50 @@ body {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 20px;
+  padding: 3rem 1rem;
+  gap: 2rem;
 }
 
 /* Form section styles */
 .form-section {
   flex: 1;
   min-width: 300px;
-  padding-right: 40px;
+  padding: 1rem;
   position: relative;
 }
 
 .main-title {
-  font-size: 32px;
+  color: #4a4a4a;
+  font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 5px;
-  color: #6A4AE8;
+  margin-bottom: 0.5rem;
 }
 
 .subtitle {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 20px;
-  color: #333;
+  background: linear-gradient(90deg, #6A4AE8, #E83A95);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
 }
 
 .description {
-  margin-bottom: 30px;
-  color: #666;
+  color: #555;
+  margin-bottom: 2rem;
+  max-width: 90%;
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
   font-weight: 500;
+  color: #4a4a4a;
 }
 
 input[type="text"],
@@ -62,15 +68,15 @@ input[type="email"],
 textarea,
 select {
   width: 100%;
-  padding: 12px;
+  padding: 0.8rem 1rem;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  border-radius: 5px;
   font-family: 'Poppins', sans-serif;
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 textarea {
-  height: 100px;
+  min-height: 100px;
   resize: vertical;
 }
 
@@ -83,25 +89,9 @@ select {
   height: 45px;
 }
 
-.submit-button {
-  background-color: #6A4AE8;
-  color: white;
-  border: none;
-  padding: 14px 25px;
-  font-size: 16px;
-  font-weight: 600;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.submit-button:hover {
-  background-color: #5A3AD8;
-}
-
 /* Advanced settings toggle */
 .advanced-settings-toggle {
-  margin-bottom: 5px;
+  margin-bottom: 1rem;
 }
 
 #toggle-advanced {
@@ -112,27 +102,55 @@ select {
   cursor: pointer;
   display: flex;
   align-items: center;
-  padding: 5px 0;
+  gap: 0.5rem;
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem;
+  padding: 0;
 }
 
 .arrow {
-  display: inline-block;
-  margin-right: 5px;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease;
 }
 
 .arrow.open {
-  transform: rotate(180deg);
+  transform: rotate(-180deg);
 }
 
 .advanced-settings {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
+  background-color: #f8f8ff;
+  border-radius: 5px;
+  border: 1px solid #e0e0ff;
+  padding: 0;
 }
 
 .advanced-settings.open {
   max-height: 500px;
+  padding: 1rem;
+}
+
+/* Submit Button */
+.submit-button {
+  background: linear-gradient(90deg, #6A4AE8, #8A6AFF);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background: linear-gradient(90deg, #5A3AD8, #7A5AEF);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(106, 74, 232, 0.3);
 }
 
 /* Video preview section styles */
@@ -148,10 +166,25 @@ select {
   width: 100%;
   max-width: 350px;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border: 1px solid #e0e0ff;
+  position: relative;
   transition: transform 0.3s;
+}
+
+.video-preview::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #6A4AE8, #E83A95);
+  z-index: -1;
 }
 
 .video-container {
@@ -225,7 +258,7 @@ select {
   position: absolute;
   bottom: 20px;
   right: 40px;
-  background-color: #6A4AE8;
+  background: linear-gradient(90deg, #6A4AE8, #E83A95);
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
@@ -233,6 +266,7 @@ select {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 0.5s, transform 0.5s;
+  box-shadow: 0 4px 10px rgba(106, 74, 232, 0.3);
 }
 
 .thank-you-visible {
