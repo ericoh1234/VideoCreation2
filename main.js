@@ -1,6 +1,6 @@
 import './fileUpload.js';
 
-import { uploadFile } from './fileUpload.js';
+import { uploadFile } from 'fileUpload.js';
 
 function fileUpload() {
   console.log("fileUpload function called");
