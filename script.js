@@ -1,7 +1,3 @@
-import 'main.js';
-
-import { main } from 'main.js';
-
 document.addEventListener('DOMContentLoaded', function () {
   // Toggle Advanced Settings
   const toggleButton = document.getElementById('toggle-advanced');
@@ -27,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
 
     // Get form data
-    const photoUpload = document.getElementById('photo-upload').value;
+    const photoUpload = document.getElementById('fileInput').value;
     const emailContact = document.getElementById('email-contact').value;
     const comments = document.getElementById('comments').value;
     const primaryColor = document.getElementById('primary-color').value;
@@ -42,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Simulate processing (would connect to backend in the future)
     setTimeout(function () {
       // Reset form input values
-      document.getElementById('photo-upload').value = '';
+      document.getElementById('fileInput').value = '';
       document.getElementById('email-contact').value = '';
       document.getElementById('comments').value = '';
       document.getElementById('primary-color').value = '#6A4AE8';
@@ -63,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }, 5000);
     }, 2000);
 
-    // Log the data (would be sent to backend in the future)
+    // Log the data (for dev testing)
     console.log({
       photoUpload,
       emailContact,
@@ -73,14 +69,10 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Live preview updates
+  // Live preview: update video progress color
   const colorInput = document.getElementById('primary-color');
-
   colorInput.addEventListener('input', function () {
-    // Update the progress indicator color in the video controls
     document.querySelector('.progress-indicator').style.backgroundColor = this.value;
-
-    // In a more robust implementation, this would update more preview elements
     console.log('Color updated:', this.value);
   });
 });
@@ -91,16 +83,3 @@ window.addEventListener('load', function () {
     document.querySelector('.video-preview').classList.add('loaded');
   }, 300);
 });
-
-// Show
-thankYouMessage.classList.add('thank-you-visible');
-thankYouMessage.classList.remove('thank-you-hidden');
-
-// Hide (after 5s)
-thankYouMessage.classList.remove('thank-you-visible');
-thankYouMessage.classList.add('thank-you-hidden');
-
-
-
-
-
