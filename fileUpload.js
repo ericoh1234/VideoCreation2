@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.0/firebas
     import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-analytics.js";
     import { getStorage, ref, uploadBytes } from "https://www.gstatic.com/firebasejs/11.6.0/firebase-storage.js";
   // TODO: Add SDKs for Firebase products that you want to use
-    
+  
   // https://firebase.google.com/docs/web/setup#available-libraries
 
   // Your web app's Firebase configuration
