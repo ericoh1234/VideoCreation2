@@ -89,3 +89,12 @@ window.addEventListener('load', function () {
     document.querySelector('.video-preview').classList.add('loaded');
   }, 300);
 });
+
+// Show
+thankYouMessage.classList.add('thank-you-visible');
+thankYouMessage.classList.remove('thank-you-hidden');
+
+// Hide (after 5s)
+thankYouMessage.classList.remove('thank-you-visible');
+thankYouMessage.classList.add('thank-you-hidden');
+
