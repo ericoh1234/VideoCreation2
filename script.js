@@ -1,4 +1,6 @@
+import 'main.js';
 
+import { main } from 'main.js';
 
 document.addEventListener('DOMContentLoaded', function () {
   // Toggle Advanced Settings
