@@ -22,13 +22,13 @@ function main(){
     uploadButton.addEventListener('click', fileUpload);
 }
 
-// Show
-thankYouMessage.classList.add('thank-you-visible');
-thankYouMessage.classList.remove('thank-you-hidden');
-
-// Hide (after 5s)
-thankYouMessage.classList.remove('thank-you-visible');
-thankYouMessage.classList.add('thank-you-hidden');
-
+formElement.addEventListener('submit', e => {
+    e.preventDefault();
+    // ... form handling (AJAX or validation) ...
+    document.getElementById('thank-you-message').classList.remove('thank-you-hidden');
+    document.getElementById('thank-you-message').classList.add('thank-you-visible');
+    // optionally hide the form:
+    formElement.style.display = 'none';  // or add a class to hide it
+});
 
 main()
