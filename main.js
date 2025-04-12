@@ -1,4 +1,4 @@
-import './fileUpload.js';
+import 'fileUpload.js';
 
 import { uploadFile } from 'fileUpload.js';
 
