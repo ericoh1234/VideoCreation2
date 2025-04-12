@@ -254,29 +254,28 @@ select {
 }
 
 /* Thank you message */
-
 #thank-you-message {
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  text-align: center;
-  margin-top: 1rem;
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: green;
-  visibility: hidden; /* hidden by default */
   opacity: 0;
   transform: translateY(20px);
+  visibility: hidden;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: green;
 }
 
 .thank-you-visible {
-  visibility: visible;
   opacity: 1 !important;
   transform: translateY(0) !important;
+  visibility: visible !important;
 }
 
 .thank-you-hidden {
-  visibility: hidden;
   opacity: 0;
   transform: translateY(20px);
+  visibility: hidden;
 }
 /*
 #thank-you-message {
